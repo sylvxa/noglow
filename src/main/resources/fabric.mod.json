@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "id": "noglow",
+  "version": "${version}",
+  "name": "noglow",
+  "description": "one-mixin mod to remove the glowing effect",
+  "authors": [
+    "sylvxa"
+  ],
+  "contact": {
+    "repo": "https://github.com/sylvxa/noglow"
+  },
+  "license": "MIT",
+  "icon": "assets/noglow/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "lgbt.sylvia.noglow.NoGlow"
+    ],
+    "modmenu": [
+      "lgbt.sylvia.noglow.modmenu.ModMenuImplementation"
+    ]
+  },
+  "mixins": [
+    "noglow.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "minecraft": "${minecraft_version}"
+  }
+}
