@@ -2,6 +2,8 @@ package lgbt.sylvia.noglow.config;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import com.google.gson.JsonSyntaxException;
+import lgbt.sylvia.noglow.NoGlow;
 import net.fabricmc.loader.api.FabricLoader;
 
 import java.io.FileWriter;
@@ -34,6 +36,9 @@ public class ConfigHelper {
             try {
                 return gson.fromJson(Files.readString(file), ConfigInstance.class);
             } catch (IOException ignored) {}
+            catch (IllegalStateException | JsonSyntaxException exception) {
+                NoGlow.LOGGER.error("Could not read NoGlow configuration file, continuing without it.", exception);
+            }
         }
         return new ConfigInstance(false);
     }
