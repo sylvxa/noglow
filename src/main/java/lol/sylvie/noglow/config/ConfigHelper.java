@@ -1,9 +1,9 @@
-package lgbt.sylvia.noglow.config;
+package lol.sylvie.noglow.config;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonSyntaxException;
-import lgbt.sylvia.noglow.NoGlow;
+import lol.sylvie.noglow.NoGlow;
 import net.fabricmc.loader.api.FabricLoader;
 
 import java.io.FileWriter;

@@ -1,12 +1,11 @@
 {
   "required": true,
   "minVersion": "0.8",
-  "package": "lgbt.sylvia.noglow.mixin",
+  "package": "lol.sylvie.noglow.mixin",
   "compatibilityLevel": "JAVA_17",
-  "mixins": [
-    "LivingEntityMixin"
-  ],
+  "mixins": [],
   "client": [
+    "EntityMixin"
   ],
   "injectors": {
     "defaultRequire": 1

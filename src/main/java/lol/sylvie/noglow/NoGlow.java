@@ -1,7 +1,7 @@
-package lgbt.sylvia.noglow;
+package lol.sylvie.noglow;
 
-import lgbt.sylvia.noglow.config.ConfigHelper;
-import lgbt.sylvia.noglow.config.ConfigInstance;
+import lol.sylvie.noglow.config.ConfigHelper;
+import lol.sylvie.noglow.config.ConfigInstance;
 import net.fabricmc.api.ClientModInitializer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

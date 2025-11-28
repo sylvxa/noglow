@@ -1,4 +1,4 @@
-package lgbt.sylvia.noglow.config;
+package lol.sylvie.noglow.config;
 
 public class ConfigInstance {
     private boolean glowing;

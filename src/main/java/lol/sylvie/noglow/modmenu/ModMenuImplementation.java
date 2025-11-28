@@ -1,9 +1,9 @@
-package lgbt.sylvia.noglow.modmenu;
+package lol.sylvie.noglow.modmenu;
 
 import com.google.common.collect.ImmutableMap;
 import com.terraformersmc.modmenu.api.ConfigScreenFactory;
 import com.terraformersmc.modmenu.api.ModMenuApi;
-import lgbt.sylvia.noglow.config.ConfigScreen;
+import lol.sylvie.noglow.config.ConfigScreen;
 
 import java.util.Map;
 

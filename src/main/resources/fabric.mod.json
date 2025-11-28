@@ -5,20 +5,29 @@
   "name": "noglow",
   "description": "one-mixin mod to remove the glowing effect",
   "authors": [
-    "sylvxa"
+    {
+      "name": "sylvxa",
+      "contact": {
+        "email": "me@sylvie.lol",
+        "homepage": "https://sylvie.lol"
+      }
+    }
   ],
   "contact": {
-    "repo": "https://github.com/sylvxa/noglow"
+    "repo": "https://github.com/sylvxa/noglow",
+    "homepage": "https://modrinth.com/project/noglow",
+    "issues": "https://github.com/sylvxa/noglow/issues",
+    "discord": "https://discord.gg/5qzrB98sBA"
   },
   "license": "MIT",
   "icon": "assets/noglow/icon.png",
   "environment": "client",
   "entrypoints": {
     "client": [
-      "lgbt.sylvia.noglow.NoGlow"
+      "lol.sylvie.noglow.NoGlow"
     ],
     "modmenu": [
-      "lgbt.sylvia.noglow.modmenu.ModMenuImplementation"
+      "lol.sylvie.noglow.modmenu.ModMenuImplementation"
     ]
   },
   "mixins": [
