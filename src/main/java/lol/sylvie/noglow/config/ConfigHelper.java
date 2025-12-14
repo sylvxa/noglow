@@ -29,7 +29,6 @@ public class ConfigHelper {
     }
 
     public static ConfigInstance load() {
-        Gson gson = new Gson();
         Path configDir = FabricLoader.getInstance().getConfigDir();
         Path file = Path.of(configDir.toString(), CONFIG_NAME);
         if (Files.exists(file)) {
