@@ -7,11 +7,11 @@ public class ConfigInstance {
         this.glowing = glowing;
     }
 
-    public void setGlowing(boolean glowing) {
-        this.glowing = glowing;
-    }
-
     public boolean isGlowing() {
         return this.glowing;
+    }
+
+    public void toggle() {
+        this.glowing = !this.glowing;
     }
 }

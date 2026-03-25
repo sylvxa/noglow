@@ -1,7 +1,9 @@
 {
   "title.noglow": "noglow",
+  "key.category.noglow.keybinds": "noglow",
   "button.noglow.toggle": "Glowing: %s",
   "button.noglow.toggle.tooltip": "When this is set to OFF, mobs and items will no longer have the glowing effect.",
   "button.noglow.toggle.on": "ON",
-  "button.noglow.toggle.off": "OFF"
+  "button.noglow.toggle.off": "OFF",
+  "key.noglow.toggle": "Toggle Glowing"
 }

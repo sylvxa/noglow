@@ -2,7 +2,7 @@ package lol.sylvie.noglow.config;
 
 import java.awt.*;
 
-import net.minecraft.client.gui.GuiGraphics;
+import net.minecraft.client.gui.GuiGraphicsExtractor;
 import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.gui.components.Tooltip;
 import net.minecraft.client.gui.screens.Screen;
@@ -12,12 +12,10 @@ import net.minecraft.network.chat.Style;
 
 import static lol.sylvie.noglow.NoGlow.CONFIG;
 
-import com.mojang.blaze3d.platform.Window;
-
 public class ConfigScreen extends Screen {
     protected Screen parent;
 
-    private Component getText(boolean glowing) {
+    public static Component getText(boolean glowing) {
         return Component.translatable("button.noglow.toggle", (glowing ? Component.translatable("button.noglow.toggle.on") : Component.translatable("button.noglow.toggle.off")));
     }
 
@@ -32,7 +30,7 @@ public class ConfigScreen extends Screen {
         int quarterWidth = width / 4;
 
         Button glowingToggleButton = Button.builder(getText(CONFIG.isGlowing()), (button) -> {
-            CONFIG.setGlowing(!CONFIG.isGlowing());
+            CONFIG.toggle();
             button.setMessage(getText(CONFIG.isGlowing()));
             ConfigHelper.save(CONFIG);
         })
@@ -51,9 +49,9 @@ public class ConfigScreen extends Screen {
     }
 
     @Override
-    public void render(GuiGraphics context, int mouseX, int mouseY, float delta) {
-        super.render(context, mouseX, mouseY, delta);
-        context.drawCenteredString(this.font, this.title.copy().setStyle(Style.EMPTY.withBold(true)), this.width / 2, 8, Color.WHITE.getRGB());
+    public void extractBackground(GuiGraphicsExtractor context, int mouseX, int mouseY, float a) {
+        super.extractBackground(context, mouseX, mouseY, a);
+        context.centeredText(this.font, this.title.copy().setStyle(Style.EMPTY.withBold(true)), this.width / 2, 8, Color.WHITE.getRGB());
     }
 
     @Override
